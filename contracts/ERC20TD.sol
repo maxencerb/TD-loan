@@ -11,7 +11,7 @@ constructor(string memory name, string memory symbol,uint256 initialSupply) publ
         _mint(msg.sender, initialSupply);
         teachers[msg.sender] = true;
     }
- 
+
 function distributeTokens(address tokenReceiver, uint256 amount) 
 public
 onlyTeachers
@@ -39,7 +39,7 @@ function transfer(address recipient, uint256 amount) public override returns (bo
         return false;
     }
 
-function transferFrom(address sender, address recipient, uint256 amount) public override returns (bool) {
+  function transferFrom(address sender, address recipient, uint256 amount) public override returns (bool) {
   emit DenyTransferFrom(sender, recipient, amount);
         return false;
     }

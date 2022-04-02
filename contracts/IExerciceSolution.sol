@@ -2,14 +2,16 @@ pragma solidity ^0.6.0;
 
 interface IExerciceSolution 
 {
+	function depositSomeTokens() external;
 
-	function claimTokensOnBehalf() external;
+	function withdrawSomeTokens() external;
 
-	function tokensInCustody(address callerAddress) external returns (uint256);
+	function borrowSomeTokens() external;
 
-	function withdrawTokens(uint256 amountToWithdraw) external returns (uint256); 
+	function repaySomeTokens() external;
 
-	function depositTokens(uint256 amountToWithdraw) external returns (uint256); 
+	function doAFlashLoan() external;
 
-	function getERC20DepositAddress() external returns (address);
+	function repayFlashLoan() external;
 }
+
